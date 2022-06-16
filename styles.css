@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 15px;
+    color: hsl(0, 0%, 95%);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    background-color: rgba(0, 110, 255, 0.711);
+}
+
+img {
+    margin-bottom: 1.2rem;
+}
+
+h3 {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: -1px;
+}
+
+.btn {
+    padding: 0.5rem 0.8rem;
+    margin-top: 1rem;
+    border-radius: 50px;
+    border: 2px solid white;
+    background-color: hsl(0, 0%, 95%);
+    cursor: pointer;
+}
+
+.container {
+    padding: 1.5rem;
+}
+
+.card {
+    padding: 1.5rem;
+}
+
+.card__sedans {
+    background-color: var(--bright-orange);
+    color: hsl(0, 0%, 95%);
+    border-radius: 10px 10px 0 0;
+}
+
+.card__sedans .btn {
+    color: var(--bright-orange);
+}
+
+.card__SUV {
+    background-color: var(--dark-cyan);
+    color: hsl(0, 0%, 95%);
+}
+
+.card__SUV .btn {
+    color: var(--dark-cyan);
+}
+
+.card__luxury {
+    background-color: var(--very-dark-cyan);
+    color: hsl(0, 0%, 95%);
+    border-radius: 0 0 10px 10px;
+}
+
+.card__luxury .btn {
+    color: var(--very-dark-cyan);
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: hsl(0, 0%, 95%);
+}
+
+
+/* GRID */
+
+.grid-body {
+    background-color: rgba(0, 0, 0, 0.922);
+}
+
+.grid {
+    max-width: 55vw;
+    background-color: rgb(2, 2, 25);
+    margin: 2rem auto 0;
+    padding: 8rem 4rem;
+    min-height: 90vh;
+    display: grid;
+    grid-template-areas: "orange orange orange yellow yellow" "orange orange orange yellow yellow" "green green blue1 blue1 blue1" "green green blue2 blue2 blue2";
+    gap: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.522);
+}
+
+.grid .buttons {
+    display: flex;
+    align-items: center;
+}
+
+.orange {
+    background-color: orangered;
+    grid-area: orange;
+}
+
+.yellow {
+    background-color: orange;
+    grid-area: yellow;
+}
+
+.green {
+    background-color: limegreen;
+    grid-area: green;
+}
+
+.blue-one {
+    background-color: rgba(0, 238, 255, 0.711);
+    grid-area: blue1;
+}
+
+.blue-two {
+    background-color: rgba(0, 238, 255, 0.711);
+    grid-area: blue2;
+}
+
+@media (min-width: 660px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        max-width: 900px;
+        margin: auto;
+    }
+    .card__sedans {
+        border-radius: 10px 0 0 10px;
+    }
+    .card__luxury {
+        border-radius: 0 10px 10px 0;
+    }
+    .card {
+        padding: 3rem;
+    }
+    .card h3 {
+        margin-bottom: 3rem;
+    }
+    .card p {
+        margin-bottom: 7rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    .card {
+        padding: 3rem;
+    }
+    .card h3 {
+        margin-bottom: 2rem;
+    }
+    .card p {
+        margin-bottom: 5rem;
+    }
+    .grid {
+        display: flex;
+        place-content: center;
+        flex-direction: column;
+        max-width: 95vw;
+        margin: 0 auto;
+    }
+    .grid div {
+        width: 100%;
+        margin: 0 auto;
+        height: 10rem;
+    }
+}
