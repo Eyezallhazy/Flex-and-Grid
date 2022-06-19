@@ -198,16 +198,4 @@ footer {
     .card p {
         margin-bottom: 5rem;
     }
-    .grid {
-        display: flex;
-        place-content: center;
-        flex-direction: column;
-        max-width: 95vw;
-        margin: 0 auto;
-    }
-    .grid div {
-        width: 100%;
-        margin: 0 auto;
-        height: 10rem;
-    }
 }
